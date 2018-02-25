@@ -1,0 +1,23 @@
+[loggers]
+keys=root
+
+[handlers]
+keys=telegrameHandler
+
+[formatters]
+keys=htmlFormatter
+
+[logger_root]
+level=DEBUG
+handlers=telegrameHandler
+propagate=False
+
+[handler_telegrameHandler]
+class=pylog_telegram.telegram_handler.PylogTelegramHandler
+level=DEBUG
+formatter=htmlFormatter
+args=('chat_id', 'token')
+
+[formatter_htmlFormatter]
+class=pylog_telegram.telegram_handler.HtmlFormatter
+datefmt=%Y-%m-%d %H:%M:%S
