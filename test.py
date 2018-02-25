@@ -42,8 +42,8 @@ class TestTelegramHandler(TestCase):
                 'telegram': {
                     'formatter': 'html',
                     'class': 'pylog_telegram.telegram_handler.PylogTelegramHandler',
-                    'chat_id': '-1001321844132',
-                    'token': '481764146:AAELlGNC8TggdBtQR9e64nqc47lC-LOXMCQ',
+                    'chat_id': '',
+                    'token': '',
                 }
             },
             'formatters': {
