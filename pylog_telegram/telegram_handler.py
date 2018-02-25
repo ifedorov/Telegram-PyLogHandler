@@ -12,12 +12,6 @@ class PylogTelegramHandler(logging.Handler):
         self.chat_id = chat_id
         self.token = token
 
-    """
-    A handler class which allows the cursor to stay on
-    one line for selected messages
-    """
-    on_same_line = False
-
     def emit(self, record):
         try:
             message = self.format(record)
@@ -26,9 +20,6 @@ class PylogTelegramHandler(logging.Handler):
                 'chat_id': self.chat_id,
                 'disable_notification': True
             }
-
-
-
 
             if getattr(self.formatter, 'parse_mode', None):
                 data['parse_mode'] = self.formatter.parse_mode
